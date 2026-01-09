@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { api } from '../../api/client';
 import { Card, CardContent } from '../../components/ui/Card';
-import { Button } from '../../components/ui/Button';
+
 import { Input } from '../../components/ui/Input';
 import { toast } from 'sonner';
 import { User, Search, Heart, Play } from 'lucide-react';

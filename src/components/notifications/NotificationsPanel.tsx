@@ -1,13 +1,13 @@
 import { useState, useRef, useEffect } from 'react';
 import { Bell, Check, Info } from 'lucide-react';
 import { cn } from '../../lib/utils';
-import { Button } from '../ui/Button';
+
 import { useNotificationStream } from '../../hooks/useNotificationStream';
 
 export function NotificationsPanel() {
     const [isOpen, setIsOpen] = useState(false);
     const panelRef = useRef<HTMLDivElement>(null);
-    const { notifications, hasUnread, markRead } = useNotificationStream();
+    const { notifications, markRead } = useNotificationStream();
 
     const unreadCount = notifications.filter(n => !n.is_read).length;
 

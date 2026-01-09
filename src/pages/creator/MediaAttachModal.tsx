@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { api } from '../../api/client';
 import { Button } from '../../components/ui/Button';
 import { Card, CardHeader, CardTitle, CardContent, CardFooter } from '../../components/ui/Card';
@@ -14,10 +13,7 @@ interface MediaAttachModalProps {
 }
 
 export default function MediaAttachModal({ isOpen, onClose, contentId, onAttached }: MediaAttachModalProps) {
-    const [attaching, setAttaching] = useState<string | null>(null);
-
     const handleAttach = async (mediaId: string) => {
-        setAttaching(mediaId);
         try {
             await api.post(`/cms/posts/${contentId}/attach/${mediaId}`);
             toast.success("Media attached successfully");
@@ -26,8 +22,6 @@ export default function MediaAttachModal({ isOpen, onClose, contentId, onAttache
         } catch (error) {
             console.error(error);
             toast.error("Failed to attach media");
-        } finally {
-            setAttaching(null);
         }
     };
 

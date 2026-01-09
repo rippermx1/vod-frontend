@@ -167,18 +167,7 @@ export default function PostEditor({ postId: initialPostId, initialData, onSaveS
         }
     };
 
-    const handleAttachMedia = async (mediaId: string) => {
-        if (!postId) return;
-        try {
-            await api.post(`/cms/posts/${postId}/attach/${mediaId}`);
-            toast.success("Media attached");
-            setShowMediaSelector(false);
-            fetchPost(postId);
-        } catch (error) {
-            console.error(error);
-            toast.error("Failed to attach media");
-        }
-    };
+
 
     const handleDetachMedia = async (mediaId: string) => {
         if (!postId || !window.confirm("Remove this media?")) return;

@@ -6,7 +6,7 @@ import { Input } from '../../components/ui/Input';
 import { Modal } from '../../components/ui/Modal';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '../../components/ui/Tabs';
 import { toast } from 'sonner';
-import { Loader2, CreditCard, Clock, CheckCircle, Wallet, History, AlertTriangle, DollarSign } from 'lucide-react';
+import { Loader2, CheckCircle, AlertTriangle, DollarSign, Clock } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 interface Subscription {

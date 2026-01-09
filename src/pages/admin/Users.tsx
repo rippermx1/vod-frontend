@@ -3,7 +3,7 @@ import { api } from '../../api/client';
 import { Card, CardContent, CardHeader, CardTitle } from '../../components/ui/Card';
 import { Badge } from '../../components/ui/Badge';
 import { Button } from '../../components/ui/Button';
-import { Search, Filter, Ban, CheckCircle } from 'lucide-react';
+import { Search, Ban, CheckCircle } from 'lucide-react';
 import { Input } from '../../components/ui/Input';
 import { toast } from 'sonner';
 
